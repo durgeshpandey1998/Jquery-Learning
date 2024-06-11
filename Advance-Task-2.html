@@ -1,0 +1,111 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+ <title>First jQuery Example</title>  
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">  
+ </script>  
+ <script type="text/javascript" language="javascript">  
+ $(document).ready(function() {  
+
+    $('img').mouseenter(function(){
+        alert("Mouse entered the image!");
+      });
+      $('img').mouseout(function(){
+        alert("Mouse left the image!");
+      });
+ 
+    $("input[name='gender']").change(function(){
+        let selectedGender = $("input[name='gender']:checked").val();
+        alert("Selected gender: " + selectedGender);
+      });
+
+ $('#btnSubmit3').click(function(){
+    // var rectangleShapeProperty = $("#div1").attr('style');
+    // alert($("#div1").attr('style'));
+    // $("img").after("After image tag world!");
+    //$("img").clone().appendTo("body");
+
+ });
+
+ $('#btnArithmaticOperation').click(function(){
+   let x = 8;
+   let y = 6;
+   //let result = parseInt(x) + parseInt(y);
+   alert("Sum of two number : " + (x+y));
+
+ });
+
+ $('#myForm').submit(function(event){
+        event.preventDefault(); 
+        let name = $('#name').val();
+               let city = $('#city').val();
+
+let gender = $("input[name='gender']:checked").val();
+
+alert("Data added:\nName - " + name + "\nCity - " + city + "\nGender - " + gender);
+
+      });
+ $('img').click(function(e) {
+    var offset = $(this).offset();
+    alert(e.pageX - offset.left);
+    alert(e.pageY - offset.top);
+  });
+
+ });  
+
+ 
+
+ </script>  
+ <style>
+     label:hover {
+      background-color: lightgray;
+    }
+ </style>
+ </head>  
+ <body>  
+    <h1>Jquery Learning </h1>
+
+
+    <img src="https://www.w3schools.com/tags/img_girl.jpg" alt="Girl in a jacket" >
+
+    <!-- <div id="div1" style="width:80px;height:40px; background-color:red;"></div><br> -->
+      
+<button id="btnSubmit3" value="Submit" style="height: 80px;"> Save </button>
+
+<button id="btnArithmaticOperation" value="Submit" style="height: 80px;"> Arithmatic Operation </button>
+
+<form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    
+    <label for="city">City:</label>
+    <select id="city" name="city">
+      <option value="Ayodhya">Ayodhya</option>
+      <option value="Lucknow">Lucknow</option>
+      <option value="Varanasi">Varanasi</option>
+      <option value="Agra">Agra</option>
+      <option value="Basti">Basti</option>
+    </select><br><br>
+    
+    <label for="gender">Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="Other">
+    <label for="other">Other</label><br><br>
+    
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>My Video</h2>
+
+  <video width="320" height="240" controls>
+    <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+  </video>
+
+    
+</body>  
+</html>  

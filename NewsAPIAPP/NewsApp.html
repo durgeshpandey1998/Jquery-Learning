@@ -1,0 +1,142 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+ <title>First jQuery Example</title>  
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+ <script type="text/javascript" language="javascript">  
+  var x = 1; 
+ $(document).ready(function() {  
+
+    var settings = {
+  "url": "https://newsapi.org/v2/top-headlines?country=us&apiKey=a742748809424669bd6b9100249f1614",
+  "method": "GET",
+  "timeout": 0,
+};
+
+$.ajax(settings)
+  .done(function (response) {
+    console.log(response);
+  })
+  .fail(function (jqXHR, textStatus, errorThrown) {
+    console.error("Error:", jqXHR.responseJSON.message);
+    alert(jqXHR.responseJSON.message);
+  });
+
+// const axios = require('axios');
+
+// const apiKey = 'a742748809424669bd6b9100249f1614';
+// const apiUrl = 'https://newsapi.org/v2/top-headlines?country=us';
+
+// axios.get(apiUrl, {
+//   params: {
+//     apiKey: apiKey
+//   }
+// })
+// .then(response => {
+//   console.log(response.data);
+// })
+// .catch(error => {
+//   console.error('Error:', error);
+// });
+
+
+
+ $('#btnSubmit3').click(function(){
+ });
+
+//  $('img').click(function(e) {
+//     var offset = $(this).offset();
+//     alert(e.pageX - offset.left);
+//     alert(e.pageY - offset.top);
+//   });
+
+ });  
+
+ 
+
+ </script>  
+ <style>
+    body {
+        background: -webkit-gradient(linear, left top, left bottom, from(pink), to(beige)) fixed;
+    }
+    /* entire container, keeps perspective */
+    
+    .flip-container {
+        -webkit-perspective: 1000;
+        background: transparent;
+        margin: 100px auto;
+    }
+    /* flip the picture when hover */
+    
+    .flip-container:hover .flipper,
+    .flip-container.hover .flipper {
+        -webkit-transform: rotateY(180deg);
+    }
+    
+    .flip-container,
+    .front,
+    .back,
+    img {
+        width: 320px;
+        height: 480px;
+    }
+    /* flip speed */
+    
+    .flipper {
+        -webkit-transition: 1.5s;
+        -webkit-transform-style: preserve-3d;
+        position: relative;
+    }
+    /* hide back  during flip */
+    
+    .front,
+    .back {
+        -webkit-backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    /* front placed above back */
+    
+    .front {
+        z-index: 2;
+    }
+    /* back, initially hidden */
+    
+    .back {
+        -webkit-transform: rotateY(180deg);
+        background: rgb(218, 138, 138);
+    }
+ </style>
+ </head>  
+ <body>  
+    <h1>Jquery Learning </h1>
+
+    <!-- <img src="https://www.w3schools.com/tags/img_girl.jpg" alt="Girl in a jacket" > -->
+
+      
+<!-- <button id="btnSubmit3" value="Submit" style="height: 80px;"> Save </button> -->
+
+
+
+
+
+  <div class="card" style="width: 18rem;">
+    <div class="flip-container">
+      <div class="flipper">
+          <div clas="front">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/51jo5YD5s4L.jpg">
+  
+          </div>
+          <div class="back">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/A13hvhQ4aXL.jpg">
+          </div>
+  
+      </div>
+  </div>
+  </div>
+
+  
+    
+</body>  
+</html>  

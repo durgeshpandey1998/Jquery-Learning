@@ -1,0 +1,166 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+ <title>First jQuery Example</title>  
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">  
+ </script>  
+ <script type="text/javascript" language="javascript">  
+  var x = 1; 
+ $(document).ready(function() {  
+//     $("p").mouseenter(function(){
+//     $("p").css("background-color", "GREEN");
+//   });
+//   $("p").mouseleave(function(){
+//     $("p").css("background-color", "lightgray");
+//   });
+ //$("p").css("background-color", "pink");  
+//  $(window).resize(function() { 
+//             $("span").text(x += 1); 
+//         }); 
+// $("p").bind("click", function(){
+//     alert("The paragraph was clicked.");
+//     $(".intro").css("color", "#28a745");
+//   });
+
+// $("p").hover(function(){
+   
+//     alert($("#txtbox").val());
+
+//     $(this).css("background-color", "yellow");
+//     }, function(){
+//     $(this).css("background-color", "pink");
+//   });
+
+  //delegate function
+
+//   $("div").delegate("p", "click",function(){
+//     $("p").css("background-color", "pink");
+//   });
+
+// $("p").click(function(){
+//     $(this).slideToggle();
+//   });
+//   $("button").click(function(){
+//     $("p").unbind();
+//   });
+
+ $('#btnSubmit3').click(function(){
+
+    //alert($("span").hasClass("intro"));
+    //$("h3").toggleClass("bgcolorChange");
+
+     //#jQuery width():-
+
+//     var div_width =  $("#div1").width();
+//     //alert(div_width);
+
+//     $( "#div1" ).animate({
+//    width: div_width + 30 +"px", //"15px", 
+//    height: "300px", 
+//     }, 1500 );
+
+   
+   // #jQuery innerWidth():-
+
+    // var innerWidth = $("div").innerWidth();
+    // var innerOuterwidth = $("div").outerWidth();
+    // var onlywidth =  $("div").width();
+    // alert($("div").innerWidth());
+
+
+   // #jQuery height():-
+
+//    var innerheight = $("div").innerHeight();
+//     var innerOuterheight = $("div").outerHeight();
+//     var onlyheight =  $("div").height();
+//     alert($("div").innerHeight());
+
+    //set div height + 30
+
+//     var div_hight =  $("#div1").height();
+
+//     $( "#div1" ).animate({
+//    width: "150px", //"15px", 
+//    height: div_hight + 30 +"px" ,//"300px", 
+//     }, 1500 );
+
+
+// Wrap Method , Wrap ALl, Unwarp, InnerWrap
+
+//$("p").wrap("<div><h3>Wrap Test</h3></div>");
+
+//$("p").wrapInner("<p><b>Wrap Inner</b></p>");
+
+
+//$('.inner').wrapAll('<div class="new" />'); //Wrap all inner class div into single div class 
+//$('.inner').wrap('<div class="new" />'); //Wrap every inner class div into seprate(individual) div class 
+
+//unwrap method
+//$(".inner").unwrap();
+
+
+// InnerWidth of Image
+//alert($("img").innerWidth());
+
+//Get the outerHeight of the image
+
+//alert($("img").outerHeight());
+
+$(".intro").css("color", "#28a745");
+
+ });
+//  $('img').click(function(e) {
+//     var offset = $(this).offset();
+//     alert(e.pageX - offset.left);
+//     alert(e.pageY - offset.top);
+//   });
+
+ });  
+
+ 
+
+ </script>  
+ <style>
+     .colorChange {
+            color: #006600;
+        }
+        .bgcolorChange{
+            background-color: rgb(230, 181, 230);
+        }
+        .new{background-color: yellow;}
+ </style>
+ </head>  
+ <body>  
+    <h1>Jquery Learning </h1>
+    <h3>Change back ground color </h3>
+
+    <p class="intro" id="p1">This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <span class="intro"> This is span Tag </span>
+
+    <img src="https://www.w3schools.com/tags/img_girl.jpg" alt="Girl in a jacket" >
+
+    <!-- <img src="https://www.w3schools.com/tags/img_girl.jpg" alt="Girl in a jacket" > -->
+
+    <!-- <div id="div1" style="width:80px;height:40px; background-color:red; border: solid;"></div><br> -->
+     <!-- <div></div> -->
+     <!-- <div class="container">
+          <div class="inner">Hello</div>
+          <div class="inner">Goodbye</div>
+      </div> -->
+
+      <p>Click me!</p>
+
+      Enter your name: <input type="text" id ="txtbox">
+<!-- 
+      <div style="background-color:yellow;">
+        <p>This is a paragraph inside a div element.</p>
+      </div>
+      
+      <p>This is a paragraph.</p> -->
+      
+<button id="btnSubmit3" value="Submit" style="height: 80px;"> Save </button>
+
+    
+</body>  
+</html>  
